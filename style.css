@@ -690,7 +690,7 @@ header {
     }
 }
 
-@media (max-width: 372px) {
+@media (max-width: 380px) {
     .logo {
         font-size: 15px;
     }
