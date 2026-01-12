@@ -662,113 +662,150 @@ header {
     }
 
     #menu-icon {
-        padding-right: 30px;
         font-size: 20px;
     }
 
     .categories {
         max-width: 480px;
     }
+
     .categories-container {
         max-width: 480px;
         grid-template-columns: repeat(auto-fit, minmax(170px, auto));
     }
+
     .products {
         max-width: 480px;
     }
+
     .products-container {
         grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     }
+
     .about {
         max-width: 480px;
     }
+
     .customer {
         max-width: 480px;
     }
+
     .footer {
         margin-left: 40px;
     }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 450px) {
     .logo {
         font-size: 15px;
     }
+
     .profile img {
         width: 30px;
         height: 30px;
     }
+
     .logo .fa-solid {
         font-size: 20px;
     }
+
     .profile span {
         display: none;
     }
+
     .home-text {
         padding-top: 70px;
     }
+
     #menu-icon {
         font-size: 15px;
-        padding-right: 40px;
+        margin-right: 40px;
     }
+
     .container img {
-        padding-right: 20px;
+        margin-right: 40px;
         width: 350px;
         height: 900px;
         object-fit: contain;
     }
+
     .categories {
         max-width: 320px;
     }
+
     .categories h1 {
         font-size: 16px;
     }
+
     .categories a {
         font-size: 14px;
     }
+
     .categories .btn {
         padding: 10px;
     }
+
     .categories-container {
         max-width: 320px;
         grid-template-columns: repeat(auto-fit, minmax(140px, auto));
     }
+
     .categories-container .box h3 {
         font-size: 16px;
     }
+
     .categories-container .box span {
         font-size: 12px;
     }
+
     .products {
         max-width: 320px;
     }
+
     .products h1 {
         font-size: 16px;
     }
+
     .products a {
         font-size: 14px;
     }
+
     .products .btn {
         padding: 10px;
     }
+
     .products-container {
         grid-template-columns: repeat(auto-fit, minmax(170px, auto));
     }
+
     .about {
         max-width: 320px;
         grid-template-columns: repeat(auto-fit, minmax(120px, auto));
     }
+
     .about .btn {
         padding: 10px;
     }
+
     .about a {
         font-size: 14px;
     }
+
     .customer {
         max-width: 320px;
     }
+
     .footer {
         font-size: 14px;
         margin-left: 30px;
+    }
+
+    @media (max-width: 350px) {
+        .container img {
+            margin-right: 10px;
+            width: 300px;
+            height: 900px;
+            object-fit: contain;
+        }
     }
 }
