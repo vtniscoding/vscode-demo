@@ -151,7 +151,7 @@ header {
 
 /* Slide Background */
 .swiper-slide-active {
-    background: url(/src/assets/images/background.png);
+    background: url(./src/assets/images/background.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -467,4 +467,5 @@ header {
     to {
         opacity: 1;
     }
+
 }
