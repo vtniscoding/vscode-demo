@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Fruits And Vegetables Website</title>
@@ -16,59 +15,75 @@
 
    <!-- Box Icons -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-
 </head>
 
 <body>
-   <!-- Nav Bar -->
-   <header class="navbar" id="navbar">
-      <!-- Home Logo -->
-      <div class="home-logo">
-         <a href="#" class="logo"><i class="fa-solid fa-leaf"></i></i><span>Delicacy</span></a>
+   <!-- Toggle Menu -->
+   <input type="checkbox" hidden id="nav-btn-input">
+
+   <!-- Header -->
+   <header class="header">
+      <div class="header-container">
+
+         <!-- Nav Open Button -->
+         <label for="nav-btn-input" class="nav-bar-btn">
+            <i class="fa-solid fa-bars"></i>
+         </label>
+
+         <!-- Logo -->
+         <div class="logo">
+            <a href="#" class="logo"><i class="fa-solid fa-leaf"></i></i><span>Delicacy</span></a>
+         </div>
+
+         <!-- Navigation PC -->
+         <nav class="nav-pc">
+            <ul class="nav-pc-list">
+               <li><a href="#home" class="nav-link">Home</a></li>
+               <li><a href="#categories" class="nav-link">Categories</a></li>
+               <li><a href="#products" class="nav-link">Product</a></li>
+               <li><a href="#about" class="nav-link">About</a></li>
+               <li><a href="#customer" class="nav-link">Customers</a></li>
+            </ul>
+         </nav>
+
+         <!-- User Profile -->
+         <div class="profile">
+            <div class="profile-info">
+               <span class="profile-name">Ngoc Viet</span>
+            </div>
+            <div class="avatar">
+               <img src="https://ui-avatars.com/api/?name=Henry+Smith&background=e27126&color=fff" alt="">
+               <span class="status-online"></span>
+            </div>
+            <i class="fa-solid fa-caret-down"></i>
+         </div>
       </div>
+   </header>
 
-      <!-- Nav Open Button -->
-      <label for="nav-btn-input" class="nav__btn">
-         <i class="fa-solid fa-bars" id="menu-icon"></i>
-      </label>
-      <input type="checkbox" hidden name="" class="nav-btn-input__check" id="nav-btn-input">
+   <!-- Fade Overlay -->
+   <label for="nav-btn-input" class="nav-overlay"></label>
 
-      <!-- Nav Overlay -->
-      <label for="nav-btn-input" class="nav__overlay"></label>
+   <!-- Menu Mobile -->
+   <nav class="nav-mobile">
+      <div class="nav-mobile-top">
+         <div class="logo">
+            <a href="#" class="logo"><i class="fa-solid fa-leaf"></i></i><span>Delicacy</span></a>
+         </div>
 
-      <!-- Nav List Mobile -->
-      <nav class="nav__mobile">
-         <!-- Nav Close Button -->
-         <label for="nav-btn-input" class="nav__mobile-close">
+         <!-- Close Button -->
+         <label for="nav-btn-input" class="nav-mobile-close">
             <i class="fa-solid fa-xmark"></i>
          </label>
-         <ul class="nav__mobile-list">
-            <li><a href="#home" class="nav__mobile-link"><i class="fa-solid fa-house"></i> Home</a></li>
-            <li><a href="#categories" class="nav__mobile-link"><i class="fa-solid fa-bars-staggered"></i> Categories</a>
-            </li>
-            <li><a href="#products" class="nav__mobile-link"><i class="fa-solid fa-box-open"></i> Product</a></li>
-            <li><a href="#about" class="nav__mobile-link"><i class="fa-regular fa-circle-question"></i> About</a></li>
-            <li><a href="#customer" class="nav__mobile-link"><i class="fa-solid fa-user"></i> Customers</a></li>
-         </ul>
-      </nav>
-
-      <!-- Nav List PC -->
-      <nav class="nav__pc">
-         <ul class="nav__pc-list">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#categories">Categories</a></li>
-            <li><a href="#products">Product</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#customer">Customers</a></li>
-         </ul>
-      </nav>
-
-      <!-- Profile -->
-      <div class="profile">
-         <img src="src/assets/images/profile.jpg" alt="">
-         <span>Henry Smith</span>
-         <i class="fa-solid fa-caret-down"></i>
       </div>
+      <ul class="nav-mobile-list">
+         <li><a href="#home" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+         <li><a href="#categories" class="nav-link"><i class="fa-solid fa-bars-staggered"></i> Categories</a></li>
+         <li><a href="#products" class="nav-link"><i class="fa-solid fa-box-open"></i> Product</a></li>
+         <li><a href="#about" class="nav-link"><i class="fa-regular fa-circle-question"></i> About</a></li>
+         <li><a href="#customer" class="nav-link"><i class="fa-solid fa-user"></i> Customers</a></li>
+      </ul>
+      <button class="logout-btn">Log Out</button>
+   </nav>
 
    </header>
 

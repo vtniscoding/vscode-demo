@@ -24,34 +24,42 @@ hearts.forEach(heart => {
   });
 });
 
-// PC Navigation
-const navLinks = document.querySelectorAll('.nav__pc a, .nav__mobile-link');
 
+
+// 1. Chọn tất cả các link có class 'nav-link'
+const navLinks = document.querySelectorAll('.nav-link');
+const navInput = document.getElementById('nav-btn-input');
+
+// 2. Lắng nghe sự kiện click trên từng link
 navLinks.forEach(link => {
-    link.addEventListener('click', function() {
-        // 1. Xóa class 'active' khỏi tất cả các link khác
-        navLinks.forEach(l => l.classList.remove('active'));
-        
-        // 2. Thêm class 'active' vào link vừa click
-        this.classList.add('active');
-    });
-});
+  link.addEventListener('click', function (e) {
+    // Tự động đóng menu bằng cách bỏ check input
+    if (navInput.checked) {
+      navInput.checked = false;
+    }
 
-// Mobile Navigation
-const mobileLinks = document.querySelectorAll('.nav__mobile-link');
-const checkbox = document.querySelector('.nav-btn-input__check');
-mobileLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    checkbox.checked = false; // Tắt checkbox -> CSS tự thu menu lại
+    // Trình duyệt sẽ tự động cuộn đến phần ID nhờ vào href="#id" 
+    // và thuộc tính scroll-behavior: smooth trong CSS.
   });
 });
 
-// Auto Scroll 
-window.onscroll = () => {
-  navbar.classList.remove('active');
-  let header = document.querySelector('header');
-  header.classList.toggle('shadow', window.scrollY > 0);
-}
+// 3. (Tùy chọn) Xử lý cuộn bù trừ cho chiều cao của Header
+// Nếu Header là sticky, nó có thể che mất tiêu đề của Section
+window.addEventListener('hashchange', () => {
+  const offset = 80; // Chiều cao của header
+  if (window.location.hash) {
+    const target = document.querySelector(window.location.hash);
+    if (target) {
+      const elementPosition = target.offsetTop;
+      window.scrollTo({
+        top: elementPosition - offset,
+        behavior: 'smooth'
+      });
+    }
+  }
+});
+
+
 
 // Footer Accordion
 document.addEventListener('DOMContentLoaded', () => {
