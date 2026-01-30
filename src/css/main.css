@@ -266,8 +266,8 @@ ul {
     position: fixed;
     display: inline-flex;
     width: 500px;
-    top: 6em;
-    right: 12em;
+    top: 16%;
+    left: 50%;
 }
 
 /* Slide Background */
