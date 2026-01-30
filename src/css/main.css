@@ -259,6 +259,7 @@ ul {
     width: 100%;
     min-height: 35em;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
